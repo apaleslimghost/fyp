@@ -6,7 +6,7 @@ import chunk from 'lodash.chunk'
 import data from './data.yml'
 import './fonts'
 
-const fontScale = scale => `${Math.round(7 * 1.25 ** scale)}pt`
+const fontScale = scale => `${Math.round(6 * 1.3 ** scale)}pt`
 
 const Avery7671Label = styled.View.attrs({wrap: false})`
 width: 46.4mm;
@@ -34,17 +34,17 @@ padding: 3mm;
 const Header = styled.View``
 
 const Section = styled.View`
-font-family: 'Calibre';
+font-family: 'Inter';
 font-size: ${fontScale(1)};
 padding-bottom: 10pt;
-line-height: 1.2;
+line-height: 1.1;
 `
 
 const Heading = styled.Text`
 font-family: 'Revolution Gothic';
 text-transform: uppercase;
-font-size: ${fontScale(2)};
-margin-bottom: 5pt;
+font-size: ${fontScale(3)};
+margin-bottom: 4pt;
 letter-spacing: -0.5pt;
 `
 

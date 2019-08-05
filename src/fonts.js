@@ -12,6 +12,6 @@ Font.register({
 })
 
 Font.register({
-	src: path.resolve(__dirname, '../fonts/calibre-regular.ttf'),
-	family: 'Calibre',
+	src: path.resolve(__dirname, '../fonts/inter-regular.ttf'),
+	family: 'Inter',
 })
