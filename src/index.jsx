@@ -11,8 +11,6 @@ const fontScale = scale => `${Math.round(6 * 1.3 ** scale)}pt`
 const Avery7671Label = styled.View.attrs({wrap: false})`
 width: 46.4mm;
 height: 76.2mm;
-border: 1px dotted lightgrey;
-border-radius: 3mm;
 `
 
 const Grid = styled.View`
