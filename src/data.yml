@@ -1,54 +1,74 @@
 - title: Bureaucracy
+  russianTitle: бюрократизм
   strategy: At the end of the game, gain 3VP for every Ministry tile on the board.
   shared: When a Ministry tile is built, add one worker to the pool. When a Ministry tile is discarded, remove one worker from the pool.
 - title: Censorship
+  russianTitle: цензура
   strategy: At the end of the game, gain 20VP minus 2VP per Culture.
   shared: Once per round, each player may discard a shared strategy without allocating a worker. -1 Unity if not yours.
 - title: Comintern
+  russianTitle: Коминтерн
   strategy: At the end of the game, gain 5VP per player.
   shared: The limit for unshared strategies increases by 1.
 - title: Communism
+  russianTitle: Коммунизм
   strategy: The game ends if Unity reaches -10. If the game ends as a result of Communism, there is no winner.
   shared: When Unity becomes greater than or equal to 5, add one worker per player to the pool. When Unity becomes less than 5, remove these workers from the pool.
 - title: Culture
+  russianTitle: культура
   strategy: The game ends if Culture reaches 10. At the end of the game, gain 2VP per Culture.
 - title: Demagogue
+  russianTitle: Демагог
   strategy: The game ends if Unity reaches 10. At the end of the game, gain 2VP per Unity.
 - title: Dictatorship
+  russianTitle: диктатура
   strategy: The game ends if Unity reaches -10. If the game ended as a result of Dictatorship, gain 30VP. 
   shared: Once per round, each player may draw a strategy without allocating a worker.
 - title: Engineering
+  russianTitle: инженерия
   strategy: The game ends if, at the end of any Planning phase, there are 20 tiles. At the end of the game, gain 1VP for every tile.
   shared: Once per Planning phase, players may build any structure without consuming resources.
 - title: Glasnost
+  russianTitle: Гласность
   strategy: At the end of the game, gain 5VP for every shared Strategy.
   shared: Once per round, each player may share a Strategy without allocating a worker.
 - title: Khozraschyot
+  russianTitle: хозрасчёт
   strategy: At the end of the game, ₽ are worth 1VP more to you.
   shared: When players gain 1₽, place 1₽ on this card. If this card is discarded, return any ₽ on it to the supply.
 - title: Logistics
+  russianTitle: Логистика
   strategy: At the end of the game, gain 3VP for every resource-producing tile.
   shared: Each resource-producing tile may have an extra worker allocated to it per round.
 - title: Luddism
+  russianTitle: луддизма
   strategy: At the end of the game, gain 20VP minus 2VP per Science.
   shared: Once per Planning phase, any player may reduce Science by one to produce any two resources.
 - title: Military
+  russianTitle: военный
   strategy: The game ends if Military reaches 10. At the end of the game, gain 2VP per Military.
 - title: Pacifism
+  russianTitle: Пацифизм
   strategy: If Military is 0 at the end of the game, gain 20VP.
 - title: Perestroika
+  russianTitle: перестройка
   strategy: At the end of the game, gain 10VP if there are no more than 5 tiles (excluding the Kremlin)
   shared: Once per planning phase, players may choose a (non-Kremlin) tile to discard. Produce the resources that would be used to build it again, then discard the tile.
 - title: Prodnalog
+  russianTitle: продналога
   strategy: At the end of the game, gain 5VP for every Farm tile on the board.
   shared: During the planning phase, food resources may be sold for 1₽.
 - title: Propaganda
+  russianTitle: пропаганда
   strategy: The game ends if, at the end of any Planning phase, there are 5 Monument tiles. At the end of the game, gain 3vp for each Monument tile. 
 - title: Science
+  russianTitle: Наука
   strategy: The game ends if Science reaches 10. At the end of the game, gain 2VP per Science.
 - title: Shturmovshchina
+  russianTitle: Штурмовщина
   strategy: The game ends if, at the end of any planning phase, all workers' produced resources were used. If the game ends due to Shturmovshchina, gain 20vp.
   shared: Once per planning phase, players may choose a tile and reallocate up to two workers to that tile.
 - title: Uskoreniye
+  russianTitle: ускоре́ние
   strategy: At the end of the game, gain 1vp for each worker in the pool
   shared: Each player may allocate two workers on their first turn in each round.

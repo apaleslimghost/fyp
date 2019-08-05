@@ -37,6 +37,7 @@ const Section = styled.View`
 font-family: 'Calibre';
 font-size: ${fontScale(1)};
 padding-bottom: 10pt;
+line-height: 1.2;
 `
 
 const Heading = styled.Text`
@@ -44,6 +45,7 @@ font-family: 'Revolution Gothic';
 text-transform: uppercase;
 font-size: ${fontScale(2)};
 margin-bottom: 5pt;
+letter-spacing: -0.5pt;
 `
 
 const Title = styled(Heading)`
