@@ -8,12 +8,16 @@
   shared: Once per round, each player may discard a shared strategy without allocating a worker. -1 Unity if not yours.
 - title: Comintern
   russianTitle: Коминтерн
-  strategy: At the end of the game, gain 5VP per player.
+  strategy: At the end of the game, gain 5VP per player that has Comintern.
   shared: The limit for unshared strategies increases by 1.
 - title: Communism
   russianTitle: Коммунизм
   strategy: The game ends if Unity reaches -10. If the game ends as a result of Communism, there is no winner.
   shared: When Unity becomes greater than or equal to 5, add one worker per player to the pool. When Unity becomes less than 5, remove these workers from the pool.
+- title: Cosmonaut
+  russianTitle: космонавт
+  strategy: At the end of the game, if Baikonur is on the board, gain 20VP.
+  shared: Baikonur produces 1 more Science.
 - title: Culture
   russianTitle: культура
   strategy: The game ends if Culture reaches 10. At the end of the game, gain 2VP per Culture.
@@ -44,12 +48,20 @@
   russianTitle: луддизма
   strategy: At the end of the game, gain 20VP minus 2VP per Science.
   shared: Once per Planning phase, any player may reduce Science by one to produce any two resources.
+- title: M.A.D.
+  russianTitle: в.г.у.
+  strategy: At the end of the game, if you are the only player who has M.A.D., gain 20VP. Otherwise, lose 20VP. If this card is shared, gain 10VP.
 - title: Military
   russianTitle: военный
   strategy: The game ends if Military reaches 10. At the end of the game, gain 2VP per Military.
+  shared: 'Work:'
+- title: Nonproliferation
+  russianTitle: нераспространение
+  strategy: The game ends if Arzamas-16 and at least one Uranium Mine are on the board. If the game ends due to Nonproliferation, lose 10VP. At the end of the game, if Arzamas-16 is not on the board, gain 20VP.
+  shared: Once per Planning phase, players may sell one uranium resource for 5₽.
 - title: Pacifism
   russianTitle: Пацифизм
-  strategy: If Military is 0 at the end of the game, gain 20VP.
+  strategy: At the end of the game, gain 20VP minus 2VP per Military.
 - title: Perestroika
   russianTitle: перестройка
   strategy: At the end of the game, gain 10VP if there are no more than 5 tiles (excluding the Kremlin)
@@ -60,15 +72,16 @@
   shared: During the planning phase, food resources may be sold for 1₽.
 - title: Propaganda
   russianTitle: пропаганда
-  strategy: The game ends if, at the end of any Planning phase, there are 5 Monument tiles. At the end of the game, gain 3vp for each Monument tile. 
+  strategy: The game ends if, at the end of any Planning phase, there are 3 Monument tiles. At the end of the game, gain 5VP for each Monument tile.
+  shared: When a Monument tile is built, add two workers to the pool. When a Monument tile is discarded, remove two workers from the pool.
 - title: Science
   russianTitle: Наука
   strategy: The game ends if Science reaches 10. At the end of the game, gain 2VP per Science.
 - title: Shturmovshchina
   russianTitle: Штурмовщина
   strategy: The game ends if, at the end of any planning phase, all workers' produced resources were used. If the game ends due to Shturmovshchina, gain 20vp.
-  shared: Once per planning phase, players may choose a tile and reallocate up to two workers to that tile.
+  shared: Once per planning phase, players may choose a tile and reallocate up to two unused workers to that tile.
 - title: Uskoreniye
   russianTitle: ускоре́ние
   strategy: At the end of the game, gain 1vp for each worker in the pool
-  shared: Each player may allocate two workers on their first turn in each round.
+  shared: Each player may allocate up to two workers on their first turn in each round.

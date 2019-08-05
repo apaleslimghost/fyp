@@ -35,7 +35,7 @@ const Section = styled.View`
 font-family: 'Inter';
 font-size: ${fontScale(1)};
 padding-bottom: 10pt;
-line-height: 1.1;
+line-height: 1.2;
 `
 
 const Heading = styled.Text`
@@ -68,6 +68,7 @@ const Avery7671 = ({ children }) => <Page size="A4" style={{margin: '0'}} orient
 					{child}
 				</Avery7671Label>
 			)}
+			{Array.from({length: 6 - row.length}, (_, k) => <Avery7671Label key={row.length + k} />)}
 		</Grid>
 	)}
 </Page>
