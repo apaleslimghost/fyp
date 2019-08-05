@@ -15,8 +15,8 @@ border-radius: 2mm;
 const Grid = styled.View`
 display: flex;
 flex-direction: row;
+justify-content: center;
 position: relative;
-left: 25pt;
 top: ${({even}) => even ? '85pt' : '78pt'};
 `
 
