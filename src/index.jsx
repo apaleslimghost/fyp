@@ -3,9 +3,10 @@ import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer'
 import styled, { css } from '@react-pdf/styled-components'
 import chunk from 'lodash.chunk'
 
+import data from './data.yml'
 import './fonts'
 
-const fontScale = scale => `${Math.round(8 * 1.25 ** scale)}pt`
+const fontScale = scale => `${Math.round(7 * 1.25 ** scale)}pt`
 
 const Avery7671Label = styled.View.attrs({wrap: false})`
 width: 46.4mm;
@@ -26,14 +27,16 @@ const Card = styled.View`
 height: 100%;
 display: flex;
 flex-direction: column;
+justify-content: space-between;
 padding: 3mm;
 `
 
 const Header = styled.View``
 
 const Section = styled.View`
-margin-bottom: 10pt;
-border-bottom: 1pt solid #ccc;
+font-family: 'Calibre';
+font-size: ${fontScale(1)};
+padding-bottom: 10pt;
 `
 
 const Heading = styled.Text`
@@ -57,12 +60,6 @@ line-height: 1;
 color: #FFD64F;
 `
 
-const Body = styled.View`
-flex: 1;
-font-family: 'Calibre';
-font-size: ${fontScale(1)};
-`
-
 const Avery7671 = ({ children }) => <Page size="A4" style={{margin: '0'}} orientation='landscape'>
 	{chunk(Children.toArray(children), 6).map((row, i) =>
 		<Grid key={i} even={i % 2}>
@@ -78,22 +75,20 @@ const Avery7671 = ({ children }) => <Page size="A4" style={{margin: '0'}} orient
 export default () => (
 	<Document>
 		<Avery7671>
-			{Array.from({length: 24}, (_, i) =>
-				<Card key={i}>
-					<Body>
-						<Section>
-							<Heading>Strategy</Heading>
-							<Text>Hello there General Kenobi!</Text>
-						</Section>
-						<Section>
-							<Heading>While shared</Heading>
-							<Text>Hello there General Kenobi!</Text>
-						</Section>
-					</Body>
+			{data.map(card => 
+				<Card key={card.title}>
+					{card.strategy && <Section>
+						<Heading>Strategy</Heading>
+						<Text>{card.strategy}</Text>
+					</Section>}
+					{card.shared && <Section>
+						<Heading>While shared</Heading>
+						<Text>{card.shared}</Text>
+					</Section>}
 
 					<Header>
-						<RussianTitle>Привет</RussianTitle>
-						<Title>Hello</Title>
+						<RussianTitle>{card.russianTitle}</RussianTitle>
+						<Title>{card.title}</Title>
 					</Header>
 				</Card>
 			)}
