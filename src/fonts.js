@@ -1,9 +1,7 @@
 import { Font } from '@react-pdf/renderer'
-import revolutionGothic from '../fonts/revolution-gothic-extrabold.ttf'
+import path from 'path'
 
-Font.register(
-	revolutionGothic,
-	{family: 'Revolution Gothic'}
-)
-
-console.log(revolutionGothic)
+Font.register({
+	src: path.resolve(__dirname, '../fonts/revolution-gothic-extrabold.ttf'),
+	family: 'Revolution Gothic',
+})
