@@ -68,7 +68,6 @@
           - Image:
               source: ./public/military.png
               style: { width: '9.5pt', height: '9.5pt' }
-
 - title: Nonproliferation
   russianTitle: нераспространение
   strategy: The game ends if Arzamas-16 and at least one Uranium Mine are on the board. If the game ends due to Nonproliferation, lose 10VP. At the end of the game, if Arzamas-16 is not on the board, gain 20VP.

@@ -1,5 +1,5 @@
 import React from 'react'
 import {render} from '@react-pdf/renderer'
-import MyDocument from './src'
+import Cards from './src/cards'
 
-render(<MyDocument />, 'dist/output.pdf')
+render(<Cards />, 'output/cards.pdf')
