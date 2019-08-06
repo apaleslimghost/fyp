@@ -15,3 +15,13 @@ Font.register({
 	src: path.resolve(__dirname, '../fonts/inter-regular.ttf'),
 	family: 'Inter',
 })
+
+Font.register({
+	src: path.resolve(__dirname, '../fonts/arial-unicode.ttf'),
+	family: 'Arial Unicode MS',
+})
+
+Font.registerEmojiSource({
+	format: 'png',
+	url: 'https://twemoji.maxcdn.com/2/72x72/',
+})

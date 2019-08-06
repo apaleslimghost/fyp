@@ -1,7 +1,8 @@
 import React, {Children} from 'react'
-import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer'
+import { Page, Text, View, Document, StyleSheet, Image } from '@react-pdf/renderer'
 import styled, { css } from '@react-pdf/styled-components'
 import chunk from 'lodash.chunk'
+import * as util from 'util'
 
 import data from './data.yml'
 import './fonts'
@@ -32,7 +33,7 @@ padding: 3mm;
 const Header = styled.View``
 
 const Section = styled.View`
-font-family: 'Inter';
+${({unstyled}) => !unstyled && css`font-family: 'Inter';`}
 font-size: ${fontScale(1)};
 padding-bottom: 10pt;
 line-height: 1.2;
@@ -60,6 +61,21 @@ line-height: 1;
 color: #FFD64F;
 `
 
+const customComponents = { Image, View, Text }
+
+const hydrate = children => children.map(
+	(child, i) => {
+		if(typeof child === 'object') {
+			const [component] = Object.keys(child)
+			const {children = [], ...props} = child[component]
+			const Component = customComponents[component]
+			return <Component key={i} {...props} children={hydrate(children)} />
+		}
+
+		return child
+	}
+)
+
 const Avery7671 = ({ children }) => <Page size="A4" style={{margin: '0'}} orientation='landscape'>
 	{chunk(Children.toArray(children), 6).map((row, i) =>
 		<Grid key={i} even={i % 2}>
@@ -82,9 +98,11 @@ export default () => (
 						<Heading>Strategy</Heading>
 						<Text>{card.strategy}</Text>
 					</Section>}
-					{card.shared && <Section>
+					{card.shared && <Section unstyled={card.shared.unstyled}>
 						<Heading>While shared</Heading>
-						<Text>{card.shared}</Text>
+						<Text>
+							{Array.isArray(card.shared) ? hydrate(card.shared) : card.shared}
+						</Text>
 					</Section>}
 
 					<Header>

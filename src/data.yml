@@ -24,6 +24,7 @@
 - title: Demagogue
   russianTitle: Демагог
   strategy: The game ends if Unity reaches 10. At the end of the game, gain 2VP per Unity.
+  shared: This card produces one Food per round without allocating a Worker.
 - title: Dictatorship
   russianTitle: диктатура
   strategy: The game ends if Unity reaches -10. If the game ended as a result of Dictatorship, gain 30VP. 
@@ -54,7 +55,20 @@
 - title: Military
   russianTitle: военный
   strategy: The game ends if Military reaches 10. At the end of the game, gain 2VP per Military.
-  shared: 'Work:'
+  shared:
+    - View:
+        children:
+          - Image:
+              source: ./public/worker.png
+              style: { width: '9.5pt', height: '9.5pt' }
+          - Text: { children: ['₽  →  '], style: { fontSize: '14pt' } }
+          - Image:
+              source: ./public/military.png
+              style: { width: '9.5pt', height: '9.5pt' }
+          - Image:
+              source: ./public/military.png
+              style: { width: '9.5pt', height: '9.5pt' }
+
 - title: Nonproliferation
   russianTitle: нераспространение
   strategy: The game ends if Arzamas-16 and at least one Uranium Mine are on the board. If the game ends due to Nonproliferation, lose 10VP. At the end of the game, if Arzamas-16 is not on the board, gain 20VP.
