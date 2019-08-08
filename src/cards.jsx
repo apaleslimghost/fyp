@@ -4,8 +4,8 @@ import styled, { css } from '@react-pdf/styled-components'
 import chunk from 'lodash.chunk'
 import * as util from 'util'
 
-import data from './data.yml'
-import './fonts'
+import data from './lib/data.yml'
+import './lib/fonts'
 
 const fontScale = scale => `${Math.round(6 * 1.3 ** scale)}pt`
 

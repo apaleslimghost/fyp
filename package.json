@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "run-p start:*",
-    "start:parcel": "parcel watch --target=node index.jsx",
-    "start:nodemon": "nodemon -w dist/index.js dist/index.js"
+    "start:parcel": "parcel watch --target=node src/*.jsx",
+    "start:nodemon": "nodemon -x 'node --no-warnings' -w index.js -w dist index.js",
+    "build": "parcel build --target=node src/*.jsx && node --no-warnings index.js"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,7 @@
   "dependencies": {
     "@react-pdf/renderer": "^1.6.3",
     "@react-pdf/styled-components": "^1.4.0",
+    "komatsu": "^1.3.0",
     "lodash.chunk": "^4.2.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1"
