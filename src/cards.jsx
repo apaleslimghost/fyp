@@ -100,9 +100,10 @@ export default () => (
 					</Section>}
 					{card.shared && <Section unstyled={card.shared.unstyled}>
 						<Heading>While shared</Heading>
-						<Text>
-							{Array.isArray(card.shared) ? hydrate(card.shared) : card.shared}
-						</Text>
+						{Array.isArray(card.shared)
+							? hydrate(card.shared)
+							: <Text>{card.shared}</Text>
+						}
 					</Section>}
 
 					<Header>

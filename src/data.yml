@@ -21,22 +21,51 @@
 - title: Culture
   russianTitle: культура
   strategy: The game ends if Culture reaches 10. At the end of the game, gain 2VP per Culture.
+  shared:
+    - View:
+        style: { display: flex, flexDirection: row, alignItems: center }
+        children:
+          - Image:
+              source: ./public/worker.png
+              style: { width: '9.5pt', height: '9.5pt' }
+          - Text: { children: [' '], style: { fontSize: '14pt' } }
+          - Image:
+              source: ./public/food.png
+              style: { width: '9.5pt', height: '9.5pt' }
+          - Text: { children: ['→'], style: { fontSize: '14pt', marginHorizontal: '3pt' } }
+          - Image:
+              source: ./public/culture.png
+              style: { width: '9.5pt', height: '9.5pt' }
+          - Image:
+              source: ./public/culture.png
+              style: { width: '9.5pt', height: '9.5pt' }
 - title: Demagogue
   russianTitle: Демагог
   strategy: The game ends if Unity reaches 10. At the end of the game, gain 2VP per Unity.
-  shared: This card produces one Food per round without allocating a Worker.
+  shared:
+    - View:
+        style: { display: flex, flexDirection: row, alignItems: center }
+        children:
+          - Text: { children: ['→ '], style: { fontSize: '14pt' } }
+          - Image:
+              source: ./public/food.png
+              style: { width: '9.5pt', height: '9.5pt' }
 - title: Dictatorship
   russianTitle: диктатура
   strategy: The game ends if Unity reaches -10. If the game ended as a result of Dictatorship, gain 30VP. 
   shared: Once per round, each player may draw a strategy without allocating a worker.
 - title: Engineering
   russianTitle: инженерия
-  strategy: The game ends if, at the end of any Planning phase, there are 20 tiles. At the end of the game, gain 1VP for every tile.
+  strategy: The game ends if, at the end of the Planning phase, there are 20 tiles. At the end of the game, gain 1VP for every tile.
   shared: Once per Planning phase, players may build any structure without consuming resources.
 - title: Glasnost
   russianTitle: Гласность
   strategy: At the end of the game, gain 5VP for every shared Strategy.
   shared: Once per round, each player may share a Strategy without allocating a worker.
+- title: Infrastructure
+  russianTitle: инфраструктура
+  strategy: At the end of the game, gain 2VP for every tile adjacent to a resource-producing tile.
+  shared: During the Planning phase, unproduced resources may be used for the building cost of tiles constructed adjacent to the tiles that produce the resources.
 - title: Khozraschyot
   russianTitle: хозрасчёт
   strategy: At the end of the game, ₽ are worth 1VP more to you.
@@ -48,7 +77,17 @@
 - title: Luddism
   russianTitle: луддизма
   strategy: At the end of the game, gain 20VP minus 2VP per Science.
-  shared: Once per Planning phase, any player may reduce Science by one to produce any two resources.
+  shared:
+    - View:
+        style: { display: flex, flexDirection: row, alignItems: center }
+        children:
+          - Image:
+              source: ./public/worker.png
+              style: { width: '9.5pt', height: '9.5pt' }
+          - Image:
+              source: ./public/science.png
+              style: { width: '9.5pt', height: '9.5pt' }
+          - Text: { children: [' → ??'], style: { fontSize: '14pt', marginLeft: '3pt' } }
 - title: M.A.D.
   russianTitle: в.г.у.
   strategy: At the end of the game, if you are the only player who has M.A.D., gain 20VP. Otherwise, lose 20VP. If this card is shared, gain 10VP.
@@ -57,11 +96,12 @@
   strategy: The game ends if Military reaches 10. At the end of the game, gain 2VP per Military.
   shared:
     - View:
+        style: { display: flex, flexDirection: row, alignItems: center }
         children:
           - Image:
               source: ./public/worker.png
               style: { width: '9.5pt', height: '9.5pt' }
-          - Text: { children: ['₽  →  '], style: { fontSize: '14pt' } }
+          - Text: { children: ['₽ →'], style: { fontSize: '14pt', marginHorizontal: '3pt' } }
           - Image:
               source: ./public/military.png
               style: { width: '9.5pt', height: '9.5pt' }
@@ -75,6 +115,17 @@
 - title: Pacifism
   russianTitle: Пацифизм
   strategy: At the end of the game, gain 20VP minus 2VP per Military.
+  shared:
+    - View:
+        style: { display: flex, flexDirection: row, alignItems: center }
+        children:
+          - Image:
+              source: ./public/worker.png
+              style: { width: '9.5pt', height: '9.5pt' }
+          - Image:
+              source: ./public/military.png
+              style: { width: '9.5pt', height: '9.5pt' }
+          - Text: { children: [' → ??'], style: { fontSize: '14pt' } }
 - title: Perestroika
   russianTitle: перестройка
   strategy: At the end of the game, gain 10VP if there are no more than 5 tiles (excluding the Kremlin)
@@ -82,17 +133,43 @@
 - title: Prodnalog
   russianTitle: продналога
   strategy: At the end of the game, gain 5VP for every Farm tile on the board.
-  shared: During the planning phase, food resources may be sold for 1₽.
+  shared:
+    - Text: { children: ['Once per Planning phase:']}
+    - View:
+        style: { display: flex, flexDirection: row, alignItems: center }
+        children:
+          - Image:
+              source: ./public/food.png
+              style: { width: '9.5pt', height: '9.5pt' }
+          - Text: { children: ['→ ₽'], style: { fontSize: '14pt', marginLeft: '3pt' } }
 - title: Propaganda
   russianTitle: пропаганда
-  strategy: The game ends if, at the end of any Planning phase, there are 3 Monument tiles. At the end of the game, gain 5VP for each Monument tile.
+  strategy: The game ends if, at the end of the Planning phase, there are 3 Monument tiles. At the end of the game, gain 5VP for each Monument tile.
   shared: When a Monument tile is built, add two workers to the pool. When a Monument tile is discarded, remove two workers from the pool.
 - title: Science
   russianTitle: Наука
   strategy: The game ends if Science reaches 10. At the end of the game, gain 2VP per Science.
+  shared:
+    - View:
+        style: { display: flex, flexDirection: row, alignItems: center }
+        children:
+          - Image:
+              source: ./public/worker.png
+              style: { width: '9.5pt', height: '9.5pt' }
+          - Text: { children: [' '], style: { fontSize: '14pt' } }
+          - Image:
+              source: ./public/metal.png
+              style: { width: '9.5pt', height: '9.5pt' }
+          - Text: { children: ['→'], style: { fontSize: '14pt', marginHorizontal: '3pt' } }
+          - Image:
+              source: ./public/science.png
+              style: { width: '9.5pt', height: '9.5pt' }
+          - Image:
+              source: ./public/science.png
+              style: { width: '9.5pt', height: '9.5pt' }
 - title: Shturmovshchina
   russianTitle: Штурмовщина
-  strategy: The game ends if, at the end of any planning phase, all workers' produced resources were used. If the game ends due to Shturmovshchina, gain 20vp.
+  strategy: The game ends if, at the end of the planning phase, all workers' produced resources were used. If the game ends due to Shturmovshchina, gain 20vp.
   shared: Once per planning phase, players may choose a tile and reallocate up to two unused workers to that tile.
 - title: Uskoreniye
   russianTitle: ускоре́ние
